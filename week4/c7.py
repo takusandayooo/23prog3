@@ -1,0 +1,8 @@
+s = input()
+t = input()
+x=float(s)
+y=float(t)
+print("{} / {} = {}".format(x, y, x/y))
+a=int(s)
+b=int(t)
+print("{} / {} = {}".format(a, b, a/b))
