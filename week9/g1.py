@@ -4,15 +4,9 @@ class Kakudo():
     def __str__(self):
         return "kakudo ha {} do desu.".format(self.d)
     def __add__(self,e):
-        if(0<=self.d+e.d and self.d+e.d<=360):
-            return "kakudo ha {} do desu.".format(self.d+e.d)
-        else:
-            return "kakudo ha {} do desu.".format(self.d+e.d-(self.d+e.d)//360*360)
+            return "kakudo ha {} do desu.".format((self.d+e.d)%360)
     def __sub__(self,e):
-        if(0<=self.d-e.d and self.d-e.d<=360):
-            return "kakudo ha {} do desu.".format(self.d-e.d)
-        else:
-            return "kakudo ha {} do desu.".format(self.d-e.d+(self.d+e.d)//360*360)
+            return "kakudo ha {} do desu.".format((self.d-e.d)%360)
 
 a = Kakudo(350)
 b = Kakudo(30)
