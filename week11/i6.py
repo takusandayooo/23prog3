@@ -8,13 +8,13 @@ try:
 except:
     print("open error")
     sys.exit(1)
-try:
-    output=open(args[2],"w")
-except:
-    print("open error")
-    sys.exit(1)
+sets=set()
+dic={}
+for x in args[2]:
+    sets.add(x)
+for x in sets:
+    dic[x]=0
 
-dic={"a":0,"x":0,"c":0,"m":0}
 for x in file:
     for y in x:
         try:
@@ -22,6 +22,5 @@ for x in file:
         except:
             pass
 for x,y in dic.items():
-    output.write("{} ha {} ko arimasita.\n".format(x,y))
+    print("{} ha {} ko arimasita.".format(x,y))
 file.close()
-output.close()
